@@ -1,3 +1,11 @@
+@import "compass/css3/font-face";
+@include font-face("Roboto Condensed Bold", font-files("/fonts/Roboto-BoldCondensed-webfont.woff", "/fonts/Roboto-BoldCondensed-webfont.svg", "/fonts/Roboto-BoldCondensed-webfont.ttf"), "/fonts/Roboto-BoldCondensed-webfont.eot");
+@include font-face("Roboto Slab Bold", font-files("/fonts/RobotoSlab-Bold-webfont.woff", "/fonts/RobotoSlab-Bold-webfont.svg", "/fonts/RobotoSlab-Bold-webfont.ttf"), "/fonts/RobotoSlab-Bold-webfont.eot");
+@include font-face("Roboto Slab Light", font-files("/fonts/RobotoSlab-Light-webfont.woff", "/fonts/RobotoSlab-Light-webfont.svg", "/fonts/RobotoSlab-Light-webfont.ttf"), "/fonts/RobotoSlab-Light-webfont.eot");
+@include font-face("Blogger Sans", font-files("/fonts/blogger-sans.woff", "/fonts/blogger-sans.svg", "/fonts/blogger-sans.ttf"), "/fonts/blogger-sans.eot");
+
+/*icomoon*/
+
 @font-face {
     font-family: 'icomoon';
     src: url('/fonts/icomoon.eot?wycmvo');

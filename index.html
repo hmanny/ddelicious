@@ -4,38 +4,122 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/flexslider.css" type="text/css">
     <link href="/stylesheets/screen.css" rel="stylesheet" type="text/css" />
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/jquery.flexslider-min.js"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                    animation: "slide",
+                    controlsContainer: ".flex-container"
+                }
+
+            );
+        });
+
+    </script>
+
+
     <title></title>
 </head>
 
 <body>
     <header>
-        <nav class="top-menu">
-            <ul class="menu" id="main">
-                <li id="menu0"><a title="Home" href="#">Home</a></li>
-                <li id="menu1" class="nodiv"><a title="About us" href="#">About us</a></li>
-                <li id="menu2" class="nodiv liLinkActive"><a title="Services" href="#" class="linkActive">Services</a></li>
-                <li id="menu3" class="nodiv"><a title="Gallery" href="#">Gallery</a></li>
-                <li id="menu4" class="nodiv"><a title="Contact" href="#">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo-container">
+
+                <div class="logo"><img src="/img/logo.png"></div>
+            </div>
+
+            <nav class="top-menu">
+                <ul class="menu" id="main">
+                    <li id="menu0"><a title="Home" href="#">home</a></li>
+                    <li id="menu1" class="nodiv"><a title="About us" href="#">about</a>
+                    </li>
+                    <li id="menu2" class="nodiv liLinkActive"><a title="Services" href="#" class="linkActive">menus</a>
+                        <ul>
+                            <li><a title="Our team" href="#">breakfast menu</a></li>
+                            <li><a title="Our process" href="#">lunch menu</a></li>
+                            <li><a title="Our location" href="#">dinner menu</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu3" class="nodiv"><a title="Contact" href="#">order online</a></li>
+                    <li id="menu4" class="nodiv"><a title="Contact" href="#">contact</a></li>
+                </ul>
+            </nav>
+
+
+        </div>
     </header>
-    <main></main>
+
+
+    <div class="flex-container">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="/img/chicken.jpg" />
+                    <p class="flex-caption"><span class="green">Do Noodles.</span><span class="orange"> Do Sushi.</span><span class="pink"> Do Bubble Tea.</span>
+                        <span class="tagline">a taste of asia</span></p>
+                </li>
+                <li>
+                    <img src="/img/chicken.jpg" />
+                    <p class="flex-caption"><span class="green">Do Noodles.</span><span class="orange"> Do Sushi.</span><span class="pink"> Do Bubble Tea.</span>
+                        <span class="tagline">a taste of asia</span></p>
+                </li>
+                <li>
+                    <img src="/img/chicken.jpg" />
+                    <p class="flex-caption"><span class="green">Do Noodles.</span><span class="orange"> Do Sushi.</span><span class="pink"> Do Bubble Tea.</span>
+                        <span class="tagline">a taste of asia</span></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="grey-text-box">
+        <div class="container">
+            <div class="small-logo"><img src="/img/logo-sm.png"></div>
+            <h1>Oriental Asian Fusion Food</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+        </div>
+    </div>
+
+    <container>
+        <div class="grid4 box">
+            <img>
+        </div>
+        <div class="grid4 box">
+            <img>
+        </div>
+        <div class="grid4 box">
+            <img>
+        </div>
+    </container>
+
+
     <footer>
         <nav class="mobile-menu">
             <ul class="menu" id="main">
-                <li id="menu0"><a title="Home" href="#">Home</a></li>
-                <li id="menu1" class="nodiv"><a title="About us" href="#">About us</a></li>
-                <li id="menu2" class="nodiv liLinkActive"><a title="Services" href="#" class="linkActive">Services</a></li>
-                <li id="menu3" class="nodiv"><a title="Gallery" href="#">Gallery</a></li>
-                <li id="menu4" class="nodiv"><a title="Contact" href="#">Contact</a></li>
+                <li id="menu0"><a title="Home" href="#">home</a></li>
+                <li id="menu1" class="nodiv"><a title="About us" href="#">about</a>
+                </li>
+                <li id="menu2" class="nodiv liLinkActive"><a title="Services" href="#" class="linkActive">menus</a>
+                    <ul>
+                        <li><a title="Our team" href="#">breakfast menu</a></li>
+                        <li><a title="Our process" href="#">lunch menu</a></li>
+                        <li><a title="Our location" href="#">dinner menu</a></li>
+                    </ul>
+
+                </li>
+                <li id="menu3" class="nodiv"><a title="Contact" href="#">order online</a></li>
+                <li id="menu4" class="nodiv"><a title="Contact" href="#">contact</a></li>
             </ul>
         </nav>
         <button class="menu_button"></button>
 
         Web Design by The Smarter Web Company
     </footer>
-    <script src="/js/jquery-1.11.3.min.js"></script>
+
     <script src="/js/mobile-menu.js"></script>
 </body>
 
