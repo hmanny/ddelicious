@@ -22,4 +22,15 @@ body {
     .pink {
         color: $pink;
     }
+    .box {
+        &:nth-of-type(3n-2) {
+            background-color: $dark-green;
+        }
+        &:nth-of-type(3n-1) {
+            background-color: $dark-orange;
+        }
+        &:nth-of-type(3n) {
+            background-color: $dark-pink;
+        }
+    }
 }
