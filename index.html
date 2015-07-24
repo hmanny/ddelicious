@@ -29,10 +29,8 @@
     <header>
         <div class="container">
             <div class="logo-container">
-
                 <div class="logo"><img src="/img/logo.png"></div>
             </div>
-
             <nav class="top-menu">
                 <ul class="menu" id="main">
                     <li id="menu0"><a title="Home" href="#">home</a></li>
@@ -49,8 +47,12 @@
                     <li id="menu4" class="nodiv"><a title="Contact" href="#">contact</a></li>
                 </ul>
             </nav>
+            <div class="social">
+                <span><a href="#"><img src="/img/fb.png"></a></span>
+                <span><a href="#"><img src="/img/twit.png"></a></span>
+                <span><a href="#"><img src="/img/pin.png"></a></span>
 
-
+            </div>
         </div>
     </header>
 
@@ -89,24 +91,32 @@
     </div>
 
     <div class="container menus">
+
         <div class="grid4 box">
+
             <img src="img/chickenlo.jpg">
             <h1>Breakfast Menu</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis lacus ut augue lobortis aliquam.</p>
             <a href="#">download menu</a>
+
         </div>
+
+
         <div class="grid4 box">
             <img src="/img/noodles.jpg">
             <h1>Lunch Menu</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis lacus ut augue lobortis aliquam.</p>
             <a href="#">download menu</a>
         </div>
+
+
         <div class="grid4 box">
             <img src="img/rice.jpg">
             <h1>Dinner Menu</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sagittis lacus ut augue lobortis aliquam.</p>
             <a href="#">download menu</a>
         </div>
+
     </div>
     <div class="details">
         <div class="container">
@@ -120,6 +130,9 @@
                     <li><strong>Fri:</strong> 7:00am - 10:00pm</li>
                     <li><strong>Sat:</strong> 11:00am - 10:00pm</li>
                     <li><strong>Sun:</strong> 11:00am - 10:00pm</li>
+                    <br>
+                    <li><strong>Bank Holiday Mondays:</strong>
+                        <br>11:00am - 9:00pm</li>
                 </ul>
             </div>
             <div class="grid4">
@@ -135,15 +148,12 @@
                     <li><strong>Breakfast:</strong> 7:00am - 11:30am</li>
                     <li><strong>Lunch:</strong> 11:30am - 10:00pm</li>
                 </ul>
-                <h1>Bank Holiday Mondays</h1>
-                <ul>
-                    <li><strong>Open:</strong> 11:00am - 9:00pm</li>
-                </ul>
+
 
             </div>
             <div class="grid4">
                 <h1>Contact Details</h1>
-                <ul>
+                <ul class="medium">
                     <li>Do.</li>
                     <li>7 Harding Parade</li>
                     <li>Station Road</li>
@@ -151,6 +161,12 @@
                     <li>Hertfordshire</li>
                     <li>AL5 4SW</li>
                 </ul>
+                <div class="social">
+                    <span><a href="#"><img src="/img/fb.png"></a></span>
+                    <span><a href="#"><img src="/img/twit.png"></a></span>
+                    <span><a href="#"><img src="/img/pin.png"></a></span>
+
+                </div>
 
             </div>
 
@@ -183,6 +199,15 @@
     </footer>
 
     <script src="/js/mobile-menu.js"></script>
+    <script>
+        $(".box a").mouseover(function() {
+            $(this).parents(".box").css("transform", "translateY(-8px)");
+        });
+        $(".box").mouseleave(function() {
+            $(this).css("transform", "translateY(0)");
+        });
+
+    </script>
 </body>
 
 </html>

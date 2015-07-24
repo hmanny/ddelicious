@@ -1,14 +1,21 @@
 header {
+    @include breakpoint($less-than-md) {
+        position: fixed;
+        min-height: 100px;
+        z-index: 11;
+        background: white;
+        width: 100%;
+    }
     min-height: 100px;
     .logo-container {
         display: inline-block;
         vertical-align: top;
-    }
-    background: $white;
-    .logo-container {
         position: relative;
         z-index: 9;
         width: 240px;
+        @include breakpoint($less-than-md) {
+            width: 200px;
+        }
         .logo {
             max-width: 240px;
             max-height: 240px;
@@ -20,11 +27,33 @@ header {
             padding: 15% 10% 15% 15%;
             img {
                 max-width: 135px;
+                @include breakpoint($less-than-md) {
+                    max-width: 90px;
+                }
+            }
+        }
+    }
+    .social {
+        display: none;
+        @include breakpoint($md) {
+            display: inline-block;
+        }
+        vertical-align: bottom;
+        padding-bottom: 15px;
+        text-align: right;
+        width: 25%;
+        span {
+            margin-left: 10px;
+            img {
+                box-shadow: $shadow;
             }
         }
     }
 }
 .flex-container {
+    @include breakpoint($less-than-md) {
+        top: 100px;
+    }
     .flexslider {
         border: none;
         .slides img {
@@ -39,18 +68,50 @@ header {
         -webkit-transform: translateY(-50%);
     }
     .flex-direction-nav li .prev {
+        display: none;
+        @include breakpoint($sm) {
+            display: block;
+        }
         left: 20px;
         background: url("/theme/left.png") no-repeat;
         background-position: center center;
-        margin-left: 10%;
+        margin-left: 0;
+        @include breakpoint($less-than-md) {
+            width: 26px;
+            background-size: contain;
+        }
+        @include breakpoint($xlg) {
+            margin-left: 5%;
+        }
+        @include breakpoint($xxlg) {
+            margin-left: 10%;
+        }
     }
     .flex-direction-nav li .next {
+        display: none;
+        @include breakpoint($sm) {
+            display: block;
+        }
         right: 20px;
         background: url("/theme/right.png") no-repeat;
         background-position: center center;
-        margin-right: 10%;
+        margin-right: 0;
+        @include breakpoint($less-than-md) {
+            width: 26px;
+            background-size: contain;
+        }
+        @include breakpoint($xlg) {
+            margin-right: 5%;
+        }
+        @include breakpoint($xxlg) {
+            margin-right: 10%;
+        }
     }
     p.flex-caption {
+        display: none;
+        @include breakpoint($sm) {
+            display: block;
+        }
         width: 100%;
         text-align: center;
         font-family: $bold;
@@ -58,12 +119,24 @@ header {
         transform: translateY(-50%);
         background: none;
         bottom: inherit;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        text-shadow: $shadow;
         font-size: 40px;
+        @include breakpoint($less-than-lg) {
+            font-size: 34px;
+        }
+        @include breakpoint($less-than-775) {
+            font-size: 28px;
+        }
         line-height: 1.2;
         .tagline {
             display: block;
             font-size: 90px;
+            @include breakpoint($less-than-lg) {
+                font-size: 64px;
+            }
+            @include breakpoint($less-than-775) {
+                font-size: 45px;
+            }
             font-family: $slab-bold;
             text-transform: uppercase;
             &:after {
@@ -73,8 +146,13 @@ header {
                 background-color: $white;
                 height: 10px;
                 margin: 0 auto;
-                box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+                box-shadow: $shadow;
                 margin-top: 30px;
+                @include breakpoint($less-than-md) {
+                    width: 50px;
+                    height: 7px;
+                    margin-top: 30px;
+                }
             }
         }
     }
@@ -84,7 +162,12 @@ header {
     background-color: $light-grey;
     color: $text-grey;
     padding: 30px 0;
-    font-weight: bold;
+    .small-logo {
+        padding-top: 100px;
+        @include breakpoint($md) {
+            padding-top: 0;
+        }
+    }
     h1 {
         margin: 25px 0;
         font-size: 36px;
@@ -109,8 +192,10 @@ header {
 .menus {
     padding-top: 60px;
     .box {
-        max-width: 400px;
-        @include breakpoint($less-than-lg) {
+        transition: transform 0.2s;
+        -webkit-transition: transform 0.2s;
+        max-width: 500px;
+        @include breakpoint($less-than-md) {
             margin-left: auto;
             margin-right: auto;
         }
@@ -118,10 +203,7 @@ header {
         color: $white;
         padding-bottom: 22px;
         margin-bottom: 60px;
-        box-shadow: 0px 1px 4px rgba(0,
-        0,
-        0,
-        0.7);
+        box-shadow: $shadow;
         img {
             width: 100%;
         }
@@ -145,9 +227,13 @@ header {
     }
 }
 .details {
+    text-align: center;
+    padding: 60px 0 40px;
+    @include breakpoint($md) {
+        text-align: left;
+    }
     background-color: $grey;
     color: $text-grey;
-    padding: 60px 0;
     h1 {
         font-family: $bold;
         font-size: 30px;
@@ -157,7 +243,19 @@ header {
         margin-bottom: 20px;
         li {
             font-size: 17px;
-            line-height: 1.4;
+            line-height: 1.8;
+        }
+    }
+    .social {
+        margin-top: 40px;
+        span {
+            margin-right: 10px;
+            img {
+                box-shadow: $shadow;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
         }
     }
 }

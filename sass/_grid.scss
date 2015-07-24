@@ -28,7 +28,7 @@ $width: ($column-width * $columns) + ($gutter * ($columns - 1));
         // Convert Gutter Pixels to Percentages
         $gutter-percentage: ($gutter / $width) * 96%;
         .grid#{$i} {
-            @include breakpoint($lg) {
+            @include breakpoint($md) {
                 width: $grid;
                 display: inline-block;
                 vertical-align: top;
@@ -36,7 +36,7 @@ $width: ($column-width * $columns) + ($gutter * ($columns - 1));
                 margin-bottom: 0;
             }
             width: 100%;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
         }
     }
     @else {
