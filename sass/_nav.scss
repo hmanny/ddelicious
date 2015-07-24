@@ -28,12 +28,19 @@
                 color: $text-grey;
                 text-decoration: none;
                 text-transform: lowercase;
+                &:hover {
+                    color: $orange
+                }
+                &.linkActive {
+                    color: $green;
+                }
             }
             ul {
                 position: absolute;
                 display: block;
                 visibility: hidden;
                 opacity: 0;
+                font-family: $med-text;
                 transition: opacity 0.2s;
                 -webkit-transition: opacity 0.2s;
             }
